@@ -1,6 +1,5 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 import java.util.Date;
-test test test test
 public class Ausschreibung {
 
 	

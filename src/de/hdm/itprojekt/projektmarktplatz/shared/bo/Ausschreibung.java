@@ -1,8 +1,8 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 
 public class Ausschreibung {
-
 	
+
 	private static final long serialVersionUID = 1L;
 	
 	/** Die Bezeichnung der Ausschreibung*/

@@ -1,5 +1,6 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
-
+import java.util.Date;
+dasdsadsassshdfhhhtht
 public class Ausschreibung {
 
 	
@@ -9,7 +10,7 @@ public class Ausschreibung {
 	private String bezeichnung; 
 	/** Der Inhalt der Ausschreibung */
 	private String inhalt;
-	/** Die Frist der Gültigkeit einer Ausschreibung */
+	/** Die Frist der Gï¿½ltigkeit einer Ausschreibung */
 	private Date frist;
 	
 	
@@ -48,7 +49,7 @@ public class Ausschreibung {
 		inhalt = string;
 	}
 	
-	// Setzt die Frist für die Gültigkeit einer Ausschreibung bzw. wie lange man sich bewerben kann
+	// Setzt die Frist fï¿½r die Gï¿½ltigkeit einer Ausschreibung bzw. wie lange man sich bewerben kann
 	public void setFrist(Date date){
 		frist= date;
 	}

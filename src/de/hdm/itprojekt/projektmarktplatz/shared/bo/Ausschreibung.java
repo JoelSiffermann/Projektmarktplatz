@@ -2,4 +2,57 @@ package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 
 public class Ausschreibung {
 
+	
+	private static final long serialVersionUID = 1L;
+	
+	/** Die Bezeichnung der Ausschreibung*/
+	private String bezeichnung; 
+	/** Der Inhalt der Ausschreibung */
+	private String inhalt;
+	/** Die Frist der Gültigkeit einer Ausschreibung */
+	private Date frist;
+	
+	
+	public Ausschreibung(String bezeichnung, String inhalt)
+	{
+		this.bezeichnung=bezeichnung; 
+		this.inhalt=inhalt;
+		
+	}
+	// Auslesen der Bezeichhnung
+	
+	 public String getBezeichnung() {
+		    return bezeichnung;
+		  }
+	 
+	 //Auslesen des Inhalts
+	 
+	 public String getInhalt() {
+		 
+		 return inhalt;
+	 }
+	 
+	 //Auslesen der Frist
+	 
+	 public Date getFrist(){
+		 return frist;
+	 }
+	 // Setzen der Bezeichnung einer Ausschreibung
+	public void setBezeichnung(String string) {
+	    bezeichnung = string;
+	}
+	
+	// Setzt den Inhalt einer Ausschreibung 
+	
+	public void setInhalt(String string){
+		inhalt = string;
+	}
+	
+	// Setzt die Frist für die Gültigkeit einer Ausschreibung bzw. wie lange man sich bewerben kann
+	public void setFrist(Date date){
+		frist= date;
+	}
+	
+	
+	
 }

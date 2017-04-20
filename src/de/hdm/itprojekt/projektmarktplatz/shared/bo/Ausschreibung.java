@@ -1,8 +1,9 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 import java.util.Date;
-public class Ausschreibung {
 
+public class Ausschreibung {
 	
+
 	private static final long serialVersionUID = 1L;
 	
 	/** Die Bezeichnung der Ausschreibung*/
@@ -13,11 +14,11 @@ public class Ausschreibung {
 	private Date frist;
 	
 	
-	public Ausschreibung(String bezeichnung, String inhalt)
+	public Ausschreibung(String bezeichnung, String inhalt, Date frist)
 	{
 		this.bezeichnung=bezeichnung; 
 		this.inhalt=inhalt;
-		
+		this.frist=frist;
 	}
 	// Auslesen der Bezeichhnung
 	

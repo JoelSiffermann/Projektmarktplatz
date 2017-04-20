@@ -1,6 +1,6 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 import java.util.Date;
-test test test test
+
 public class Ausschreibung {
 	
 
@@ -14,11 +14,11 @@ public class Ausschreibung {
 	private Date frist;
 	
 	
-	public Ausschreibung(String bezeichnung, String inhalt)
+	public Ausschreibung(String bezeichnung, String inhalt, Date frist)
 	{
 		this.bezeichnung=bezeichnung; 
 		this.inhalt=inhalt;
-		
+		this.frist=frist;
 	}
 	// Auslesen der Bezeichhnung
 	

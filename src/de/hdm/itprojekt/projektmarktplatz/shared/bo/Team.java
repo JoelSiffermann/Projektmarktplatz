@@ -7,7 +7,8 @@ public class Team extends Organisationseinheit{
 	private int groesse;
 	private String arbeitsfeld;
 	
-	public Team (int groesse, String arbeitsfeld){
+	public Team (String name, String email, int groesse, String arbeitsfeld) {
+		super(name, email);
 		this.groesse = groesse;
 		this.arbeitsfeld = arbeitsfeld;
 	}

@@ -8,13 +8,14 @@ public class Unternehmen extends Organisationseinheit{
 	private String geschaeftsfeld;
 	
 	/*Konstruktor */
-	public Unternehmen (String geschaeftsform, String geschaeftsfeld){
+	public Unternehmen (String name, String email, String geschaeftsform, String geschaeftsfeld){
+		super(name, email);
 		this.geschaeftsform = geschaeftsform;
 		this.geschaeftsfeld = geschaeftsfeld;
 	}
 	/* Default Konstruktor */
-	public Unternehmen (){
-	}
+//	public Unternehmen (){
+	//}
 	
 	public String getGeschaeftsform(){
 		return geschaeftsform;

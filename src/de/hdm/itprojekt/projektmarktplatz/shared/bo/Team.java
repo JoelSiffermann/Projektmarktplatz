@@ -11,9 +11,7 @@ public class Team extends Organisationseinheit{
 		this.groesse = groesse;
 		this.arbeitsfeld = arbeitsfeld;
 	}
-	public Team (){
-		
-	}
+
 	public int getGroesse(){
 		return groesse;
 	}

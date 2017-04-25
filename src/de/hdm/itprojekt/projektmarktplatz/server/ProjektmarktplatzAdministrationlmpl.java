@@ -12,7 +12,8 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
 
 public class ProjektmarktplatzAdministrationlmpl extends RemoteServiceServlet
-/**implements ProjektmarktplatzAdministration*/ {
+//implements ProjektmarktplatzAdministration */ 
+{
 	
 	
 	  public ProjektmarktplatzAdministrationlmpl() throws IllegalArgumentException {

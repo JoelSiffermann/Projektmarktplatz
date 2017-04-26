@@ -11,6 +11,10 @@ import de.hdm.itprojekt.projektmarktplatz.shared.ProjektmarktplatzAdministration
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
 
+/** in Anlehnung an Bankprojekt
+ * Autor Peter Thies
+ */
+
 public class ProjektmarktplatzAdministrationlmpl extends RemoteServiceServlet
 //implements ProjektmarktplatzAdministration */ 
 {

@@ -5,9 +5,6 @@ import java.util.Vector;
 
 import de.hdm.itprojekt.projektmarktplatz.server.db.*;
 import de.hdm.itprojekt.projektmarktplatz.shared.*;
-import de.hdm.itprojekt.projektmarktplatz.shared.bo.*;
-import de.hdm.itprojekt.projektmarktplatz.shared.ProjektmarktplatzAdministration.*;
-
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
 
@@ -20,11 +17,40 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 	 * @throws IllegalArgumentException
 	 */
 
-public class ProjektmarktplatzAdministrationlmpl extends RemoteServiceServlet
+public class ProjektmarktplatzAdministrationImpl extends RemoteServiceServlet
 	implements ProjektmarktplatzAdministration
 {
 	
-	public static final int = 
+	public ProjektmarktplatzAdministrationImpl() throws IllegalArgumentException {
+	  }
+	
+	public void init() throws IllegalArgumentException {
+		
+		 	this.eMapper = EigenschaftMapper.eigenschaftMapper();
+		 	
+		    this.pmMapper = ProjektmarktplatzMapper.projektmarktplatzMapper();
+		    
+		    this.bMapper = BewertungMapper.bewertungMapper();
+		    
+		    this.bwMapper = BewerbungMapper.bewerbungMapper();
+		    
+		    this.aMapper = AusschreibungMapper.ausschreibungMapper();
+		    
+		    this.prjMapper = ProjektMapper.projektMapper();
+		    
+		    this.prbtMapper = ProjektbeteilitungMapper.projektbeteilitungMapper();
+		    
+		    this.orgMapper = OrganisationseinheitMapper.organisationseinheitMapper();
+		    
+		    this.prtrMapper = PartnerprofilMapper.partnerprofilMapper();
+		  
+		  }
+	
+	
+	
+	//MUSS ÜBERARBEITET WERDEN!
+	public static final int DEFAULT = 0;
+	
 	/*Referenz auf Eigenschaft*/
 	private EigenschaftMapper eMapper = null;
 	
@@ -51,12 +77,6 @@ public class ProjektmarktplatzAdministrationlmpl extends RemoteServiceServlet
 	
 	/*Referenz auf Partnerprofil*/
 	private PartnerprofilMapper prtrMapper = null;
-	
-
-	
-	  public ProjektmarktplatzAdministrationlmpl() throws IllegalArgumentException {
-		  
-		  }
 	
 
 	

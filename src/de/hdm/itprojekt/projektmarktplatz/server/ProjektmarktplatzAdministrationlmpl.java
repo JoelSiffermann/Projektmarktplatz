@@ -12,7 +12,7 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
 
 	/** in Anlehnung an Bankprojekt
-	 * Autor Peter Thies
+	 * Autor Peter Thies & Christian Rathke
 	 */
 	/**Das RemoteServiceServlet ist eine Subklasse eines gewöhnlichen HTTP-Servlet und kümmert sich später automatisch 
 	 * um das Serialisieren und Deserialisieren der Parameter und Rückgabewerte. Zu beachten ist, 

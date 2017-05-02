@@ -1,19 +1,17 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
+import java.io.Serializable;
 
-public class BusinessObjekt {
+public class BusinessObjekt implements Serializable{
 	
 
 	private static final long serialVersionUID = 1L;
 
-	private int id;
+	private int id = 0;
 	
-	public BusinessObjekt (int id){
-		this.id = id;
-	}
 	public boolean equals(Object obj) {
 		  return (this == obj);
 		}
-	//nochmals überprüfen !
+	//nochmals überprüfen !!!!!!
 	public String toString(){
 		return this.getClass().getName()+"#"+this.id;
 		

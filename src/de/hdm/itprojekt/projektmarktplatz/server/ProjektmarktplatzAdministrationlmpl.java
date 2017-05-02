@@ -11,15 +11,20 @@ import de.hdm.itprojekt.projektmarktplatz.shared.ProjektmarktplatzAdministration
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
 
-/** in Anlehnung an Bankprojekt
- * Autor Peter Thies
- */
+	/** in Anlehnung an Bankprojekt
+	 * Autor Peter Thies
+	 */
+	/**Das RemoteServiceServlet ist eine Subklasse eines gewöhnlichen HTTP-Servlet und kümmert sich später automatisch 
+	 * um das Serialisieren und Deserialisieren der Parameter und Rückgabewerte. Zu beachten ist, 
+	 * dass sowohl die Methodenparameter als auch der Rückgabewert serialisierbar sein muss.
+	 * @throws IllegalArgumentException
+	 */
 
 public class ProjektmarktplatzAdministrationlmpl extends RemoteServiceServlet
-//implements ProjektmarktplatzAdministration */ 
+	implements ProjektmarktplatzAdministration
 {
 	
-	
+	public static final int = 
 	/*Referenz auf Eigenschaft*/
 	private EigenschaftMapper eMapper = null;
 	
@@ -47,6 +52,7 @@ public class ProjektmarktplatzAdministrationlmpl extends RemoteServiceServlet
 	/*Referenz auf Partnerprofil*/
 	private PartnerprofilMapper prtrMapper = null;
 	
+
 	
 	  public ProjektmarktplatzAdministrationlmpl() throws IllegalArgumentException {
 		  

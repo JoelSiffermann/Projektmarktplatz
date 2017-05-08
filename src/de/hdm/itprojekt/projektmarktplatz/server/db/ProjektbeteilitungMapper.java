@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import de.hdm.itprojekt.projektmarktplatz.shared.bo.Beteiligung;
+import de.hdm.itprojekt.projektmarktplatz.shared.bo.Bewerbung;
 import de.hdm.itprojekt.projektmarktplatz.shared.bo.Projekt;
 
 public class ProjektbeteilitungMapper {
@@ -76,5 +77,39 @@ public class ProjektbeteilitungMapper {
 	      e.printStackTrace();
 	    }
 	  }
+
+
+
+public Beteiligung getBeteiligungByID(int id) {
+    // DB-Verbindung holen
+    Connection con = DBConnection.connection();
+
+    try {
+      // Leeres SQL-Statement (JDBC) anlegen
+      Statement stmt = con.createStatement();
+
+      // Statement ausfüllen und als Query an die DB schicken
+      ResultSet rs = stmt
+          .executeQuery("");
+
+      /*
+       * Da id Primärschlüssel ist, kann max. nur ein Tupel zurückgegeben
+       * werden. Prüfe, ob ein Ergebnis vorliegt.
+       */
+      if (rs.next()) {
+        // Ergebnis-Tupel in Objekt umwandeln
+        Beteiligung b = new Beteiligung();
+        //TODO: b.attribute hinzufuegen
+
+        return b;
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+      return null;
+    }
+
+    return null;
+  }
 
 }

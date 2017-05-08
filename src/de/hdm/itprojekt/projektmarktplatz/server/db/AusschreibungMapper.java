@@ -4,9 +4,14 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Vector;
 
 import de.hdm.itprojekt.projektmarktplatz.shared.bo.Ausschreibung;
+import de.hdm.itprojekt.projektmarktplatz.shared.bo.Bewerbung;
+import de.hdm.itprojekt.projektmarktplatz.shared.bo.Partnerprofil;
 import de.hdm.itprojekt.projektmarktplatz.shared.bo.Projekt;
+import de.hdm.thies.bankProjekt.server.db.DBConnection;
+import de.hdm.thies.bankProjekt.shared.bo.Customer;
 
 public class AusschreibungMapper {
 
@@ -76,5 +81,105 @@ public class AusschreibungMapper {
 	      e.printStackTrace();
 	    }
 	  }
+	
+
+
+public Ausschreibung getAusschreibungByPartnerprofil(Partnerprofil p) {
+    // DB-Verbindung holen
+    Connection con = DBConnection.connection();
+
+    try {
+      // Leeres SQL-Statement (JDBC) anlegen
+      Statement stmt = con.createStatement();
+
+      // Statement ausfüllen und als Query an die DB schicken
+      ResultSet rs = stmt
+          .executeQuery("");
+
+      /*
+       * Da id Primärschlüssel ist, kann max. nur ein Tupel zurückgegeben
+       * werden. Prüfe, ob ein Ergebnis vorliegt.
+       */
+      if (rs.next()) {
+        // Ergebnis-Tupel in Objekt umwandeln
+        Ausschreibung a = new Ausschreibung();
+        //TODO: b.attribute hinzufuegen
+
+        return a;
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+      return null;
+    }
+
+    return null;
+  }
+
+
+
+public Ausschreibung getAusschreibungByBewerbung(Bewerbung b) {
+    // DB-Verbindung holen
+    Connection con = DBConnection.connection();
+
+    try {
+      // Leeres SQL-Statement (JDBC) anlegen
+      Statement stmt = con.createStatement();
+
+      // Statement ausfüllen und als Query an die DB schicken
+      ResultSet rs = stmt
+          .executeQuery("");
+
+      /*
+       * Da id Primärschlüssel ist, kann max. nur ein Tupel zurückgegeben
+       * werden. Prüfe, ob ein Ergebnis vorliegt.
+       */
+      if (rs.next()) {
+        // Ergebnis-Tupel in Objekt umwandeln
+        Ausschreibung a = new Ausschreibung();
+        //TODO: b.attribute hinzufuegen
+
+        return a;
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+      return null;
+    }
+
+    return null;
+  }
+
+
+
+public Vector<Ausschreibung> findByLastName(String name) {
+    Connection con = DBConnection.connection();
+    Vector<Ausschreibung> result = new Vector<Ausschreibung>();
+
+    try {
+      Statement stmt = con.createStatement();
+
+      ResultSet rs = stmt.executeQuery("");
+
+      // Für jeden Eintrag im Suchergebnis wird nun ein Customer-Objekt
+      // erstellt.
+      while (rs.next()) {
+        Ausschreibung a = new Ausschreibung();
+        
+
+        // Hinzufügen des neuen Objekts zum Ergebnisvektor
+        result.addElement(a);
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    }
+
+    // Ergebnisvektor zurückgeben
+    return result;
+  }
 
 }
+
+
+

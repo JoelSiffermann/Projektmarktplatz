@@ -8,13 +8,6 @@ public class Bewerbung {
 	private String inhalt;
 	private Date erstelldatum;
 	
-	public Bewerbung( String inhalt, Date erstelldatum){
-		
-		
-		this.inhalt=inhalt;
-		this.erstelldatum=erstelldatum;
-	}
-	
 	public String getInhalt(){
 		
 		return inhalt;

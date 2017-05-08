@@ -30,7 +30,7 @@ public class Eigenschaft {
 	
 	public void setWert(String string){
 		
-		wert=wert;
+		wert=string;
 	}
 	
 }

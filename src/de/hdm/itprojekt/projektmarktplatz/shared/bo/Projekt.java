@@ -1,7 +1,7 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 import java.util.Date;
 
-public class Projekt {
+public class Projekt extends BusinessObjekt{
 
 	private static final long serialVersionUID = 1L;
 

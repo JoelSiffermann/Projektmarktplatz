@@ -19,11 +19,11 @@ public class Partnerprofil {
 	public Date getAenderungsdatum (){
 		return aenderungsdatum;
 	}
-	public void setErstelldatum (Date erstelldatum){
-		erstelldatum = erstelldatum;
+	public void setErstelldatum (Date ed){
+		erstelldatum = ed;
 	}
-	public void setAenderungsdatum (Date aenderungsdatum){
-		aenderungsdatum = aenderungsdatum;
+	public void setAenderungsdatum (Date ad){
+		aenderungsdatum = ad;
 	}
 
 }

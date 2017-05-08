@@ -1,6 +1,6 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 
-public class Projektmarktplatz {
+public class Projektmarktplatz extends BusinessObjekt{
 	
 	private static final long serialVersionUID = 1L;
 

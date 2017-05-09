@@ -50,8 +50,8 @@ public class Beteiligung {
 	
 	//Setzt den Umfang in Personentagen
 	
-	public void setUmfang(int integer){
+	public void setUmfang(int u){
 		
-		umfang=integer; 
+		umfang=u; 
 	}
 }

@@ -1,10 +1,13 @@
 package de.hdm.itprojekt.projektmarktplatz.server;
 
+
 import java.util.ArrayList;
 import java.util.Vector;
 
+import de.hdm.itprojekt.projektmarktplatz.client.Projektmarktplatz;
 import de.hdm.itprojekt.projektmarktplatz.server.db.*;
 import de.hdm.itprojekt.projektmarktplatz.shared.*;
+
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
 
@@ -78,7 +81,12 @@ public class ProjektmarktplatzAdministrationImpl extends RemoteServiceServlet
 	/*Referenz auf Partnerprofil*/
 	private PartnerprofilMapper prtrMapper = null;
 	
-
+	public Projektmarktplatz erstelleProjektmarktplatz (String bezeichnung) throws IllegalArgumentException {
+	de.hdm.itprojekt.projektmarktplatz.shared.bo.Projektmarktplatz c = new de.hdm.itprojekt.projektmarktplatz.shared.bo.Projektmarktplatz(bezeichnung);
+	c.setBezeichnung("test");
+	return null;
 	
 	
+	
+}
 }

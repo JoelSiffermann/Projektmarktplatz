@@ -1,17 +1,12 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 
-public class Organisationseinheit {
+public class Organisationseinheit extends BusinessObjekt {
 	
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String email;
 	
-	public Organisationseinheit(String name, String email){
-		
-		this.name=name;
-		this.email=email;
-		
-	}
+
 
 	public String getName(){
 		

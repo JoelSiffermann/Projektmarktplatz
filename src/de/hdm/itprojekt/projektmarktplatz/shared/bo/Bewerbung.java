@@ -1,19 +1,14 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 import java.util.Date;
 
-public class Bewerbung {
+public class Bewerbung extends BusinessObjekt {
 
 	private static final long serialVersionUID = 1L;
 
 	private String inhalt;
 	private Date erstelldatum;
 	
-	public Bewerbung( String inhalt, Date erstelldatum){
-		
-		
-		this.inhalt=inhalt;
-		this.erstelldatum=erstelldatum;
-	}
+
 	
 	public String getInhalt(){
 		

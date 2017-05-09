@@ -1,7 +1,7 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 import java.util.Date;
 
-public class Beteiligung {
+public class Beteiligung extends BusinessObjekt{
 
 	private static final long serialVersionUID = 1L;
 
@@ -9,13 +9,7 @@ public class Beteiligung {
 	private Date ende; 
 	private int umfang;
 	
-	public Beteiligung(Date start, Date ende, int umfang){
-		
-		this.start=start;
-		this.ende=ende;
-		this.umfang=umfang;
-	}
-	
+
 	// Auslesen wann die Beteiligung gestartet hat
 	
 	public Date getStart(){

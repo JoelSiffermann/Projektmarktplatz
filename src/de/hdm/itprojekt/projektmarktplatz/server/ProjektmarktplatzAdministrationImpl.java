@@ -5,8 +5,12 @@ import java.util.Vector;
 
 import de.hdm.itprojekt.projektmarktplatz.server.db.*;
 import de.hdm.itprojekt.projektmarktplatz.shared.*;
+import de.hdm.itprojekt.projektmarktplatz.shared.bo.Beteiligung;
+import de.hdm.itprojekt.projektmarktplatz.shared.bo.Partnerprofil;
+
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-@SuppressWarnings("serial")
+
+import java.util.Date;
 
 	/** in Anlehnung an Bankprojekt
 	 * Autor Peter Thies & Christian Rathke
@@ -16,7 +20,7 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 	 * dass sowohl die Methodenparameter als auch der Rückgabewert serialisierbar sein muss.
 	 * @throws IllegalArgumentException
 	 */
-
+     @SuppressWarnings("serial")
 public class ProjektmarktplatzAdministrationImpl extends RemoteServiceServlet
 	implements ProjektmarktplatzAdministration
 {
@@ -72,13 +76,87 @@ public class ProjektmarktplatzAdministrationImpl extends RemoteServiceServlet
 	/*Referenz auf Projektbeteiligung*/
 	private ProjektbeteilitungMapper prbtMapper = null;
 	
+	
 	/*Referenz auf Organisationseinheit*/
 	private OrganisationseinheitMapper orgMapper = null;
 	
 	/*Referenz auf Partnerprofil*/
 	private PartnerprofilMapper prtrMapper = null;
 	
+	
+	@Override
+	public Beteiligung erstelleProjektbeteiligung(String email, int personentage, String bewertung, 
+			 int projektid, Date startdatum, Date enddatum) throws IllegalArgumentException{
+		Beteiligung prbt = new Beteiligung();
+	     
+//	     prbt.setEmail(email);
+//	     prbt.setPersonentage(personentage);
+//	     prbt.setBewertung(bewertung);
+//	     prbt.setProjektid(projektid);
+		
+	     prbt.setStart(startdatum);
+	     prbt.setEnde(enddatum);
+	     
+
+	     /*
+	      * Setzen einer vorläufigen Kundennr. Der insert-Aufruf liefert dann ein
+	      * Objekt, dessen Nummer mit der Datenbank konsistent ist.
+	      */
+	     prbt.setId(1);
+
+	     // Objekt in der DB speichern.
+	     return this.prbtMapper.einfuegen(prbt);
+	}
 
 	
+	public void speichernProjektbeteiligung(Beteiligung b) throws IllegalArgumentException {
+    prbtMapper.speichern(b);
+	}
 	
+	
+	public void loeschenProjektbeteiligung(Beteiligung b) throws IllegalArgumentException {
+	    this.prbtMapper.loeschen(b);
+	  }
+	
+	
+	
+	@Override
+	public Partnerprofil erstellePartnerprofil(String name, String inhalt,
+			  Date aenderungsdatum, Date erstelldatum) throws IllegalArgumentException{
+		Partnerprofil prtr = new Partnerprofil();
+	     
+
+		// prtr.setName(name);
+		 
+	     prtr.setAenderungsdatum(aenderungsdatum);
+	     prtr.setErstelldatum(erstelldatum);
+	     
+
+	     /*
+	      * Setzen einer vorläufigen Kundennr. Der insert-Aufruf liefert dann ein
+	      * Objekt, dessen Nummer mit der Datenbank konsistent ist.
+	      */
+	     prtr.setId(1);
+
+	     // Objekt in der DB speichern.
+	     return this.prtrMapper.einfuegen(prtr);
+	}
+
+	
+	public void speichernPartnerprofil(Partnerprofil p) throws IllegalArgumentException {
+    prtrMapper.speichern(p);
+	}
+	
+	
+	public void loeschenPartnerprofil(Partnerprofil p) throws IllegalArgumentException {
+	    this.prtrMapper.loeschen(p);
+	  }
+	
+	
+	public ArrayList<Bewertung> getBewertungByBewerbung() throws IllegalArgumentException {
+	    
+		return null; 
+	  }
+	
+
 }

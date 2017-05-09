@@ -7,14 +7,7 @@ public class Person extends Organisationseinheit {
 	private String beruf;
 	private float erfahrung;
 	
-	public Person(String name, String email, String vorname, String beruf, float erfahrung){
-		super(name, email);
-		this.vorname=vorname;
-		this.beruf=beruf;
-		this.erfahrung=erfahrung;
-		
-	}
-	
+
 	public String getVorname(){
 		
 		return vorname;

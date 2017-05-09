@@ -9,11 +9,13 @@
   <servlet>
     <servlet-name>greetServlet</servlet-name>
     <servlet-class>de.hdm.itprojekt.projektmarktplatz.server.GreetingServiceImpl</servlet-class>
+  	<!-- <servlet-class>de.hdm.itprojekt.projektmarktplatz.server.ProjektmarktplatzAdministrationImpl</servlet-class> -->
   </servlet>
   
   <servlet-mapping>
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/projektmarktplatz/greet</url-pattern>
+    <!-- <url-pattern>/projektmarktplatz/proj</url-pattern> -->
   </servlet-mapping>
   
   <!-- Default page to serve -->

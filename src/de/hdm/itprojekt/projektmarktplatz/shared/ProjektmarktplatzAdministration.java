@@ -8,8 +8,12 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
+
 //import de.hdm.itprojekt.projektmarktplatz.server.Partnerprofil;
 //import de.hdm.itprojekt.projektmarktplatz.server.Beteiligung;
+
+import de.hdm.itprojekt.projektmarktplatz.client.Projektmarktplatz;
+
 import de.hdm.itprojekt.projektmarktplatz.shared.bo.*;
 
 
@@ -19,6 +23,11 @@ import de.hdm.itprojekt.projektmarktplatz.shared.bo.*;
 public interface ProjektmarktplatzAdministration  extends RemoteService {
 	
 	 public void init() throws IllegalArgumentException;
+
+	 
+	 public Projektmarktplatz erstelleProjektmarktplatz (String bezeichnung) throws IllegalArgumentException;
+	 
+	 
 
 //Beteiligung
 	 

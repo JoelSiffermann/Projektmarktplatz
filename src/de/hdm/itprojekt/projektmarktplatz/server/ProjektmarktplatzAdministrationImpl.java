@@ -1,12 +1,16 @@
 package de.hdm.itprojekt.projektmarktplatz.server;
 
+
 import java.util.ArrayList;
 import java.util.Vector;
 
+import de.hdm.itprojekt.projektmarktplatz.client.Projektmarktplatz;
 import de.hdm.itprojekt.projektmarktplatz.server.db.*;
 import de.hdm.itprojekt.projektmarktplatz.shared.*;
+
 import de.hdm.itprojekt.projektmarktplatz.shared.bo.Beteiligung;
 import de.hdm.itprojekt.projektmarktplatz.shared.bo.Partnerprofil;
+
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
@@ -83,6 +87,7 @@ public class ProjektmarktplatzAdministrationImpl extends RemoteServiceServlet
 	/*Referenz auf Partnerprofil*/
 	private PartnerprofilMapper prtrMapper = null;
 	
+
 	
 	@Override
 	public Beteiligung erstelleProjektbeteiligung(String email, int personentage, String bewertung, 
@@ -107,6 +112,12 @@ public class ProjektmarktplatzAdministrationImpl extends RemoteServiceServlet
 	     // Objekt in der DB speichern.
 	     return this.prbtMapper.einfuegen(prbt);
 	}
+
+
+	public Projektmarktplatz erstelleProjektmarktplatz (String bezeichnung) throws IllegalArgumentException {
+	de.hdm.itprojekt.projektmarktplatz.shared.bo.Projektmarktplatz c = new de.hdm.itprojekt.projektmarktplatz.shared.bo.Projektmarktplatz(bezeichnung);
+	c.setBezeichnung("test");
+	return null;
 
 	
 	public void speichernProjektbeteiligung(Beteiligung b) throws IllegalArgumentException {
@@ -159,4 +170,5 @@ public class ProjektmarktplatzAdministrationImpl extends RemoteServiceServlet
 	  }
 	
 
+}
 }

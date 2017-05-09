@@ -1,11 +1,18 @@
 package de.hdm.itprojekt.projektmarktplatz.shared.bo;
 
+<<<<<<< HEAD
 public class Projektmarktplatz extends BusinessObjekt{
+=======
+public class Projektmarktplatz extends BusinessObjekt {
+>>>>>>> refs/heads/Master
 	
 	private static final long serialVersionUID = 1L;
 
-	private String bezeichnung;
+	private String bezeichnung = "";
 	
+	public Projektmarktplatz (){
+
+	} 
 	public Projektmarktplatz (String bezeichnung){
 		this.bezeichnung = bezeichnung;
 	}
@@ -13,6 +20,6 @@ public class Projektmarktplatz extends BusinessObjekt{
 		return bezeichnung;
 	}
 	public void setBezeichnung (String string){
-		bezeichnung = string;
+		this.bezeichnung = string;
 	}
 }

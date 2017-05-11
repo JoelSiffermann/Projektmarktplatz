@@ -15,8 +15,8 @@ public class ProjektmarktplatzMapper {
 		return null;
 	}
 	
-
-
+	//wenn ich die Methode so schreibe --> kein Fehler 
+	//public de.hdm.itprojekt.projektmarktplatz.client.Projektmarktplatz einfuegen(Projektmarktplatz p) {
 	public Projektmarktplatz einfuegen(Projektmarktplatz p) {
 		Connection con = DBConnection.connection();
 
@@ -40,7 +40,7 @@ public class ProjektmarktplatzMapper {
 				stmt = con.createStatement();
 
 				// Jetzt erst erfolgt die tatsächliche Einfügeoperation
-				stmt.executeUpdate("");
+				stmt.executeUpdate(""+ p.getBezeichnung() );
 			}
 
 		} catch (SQLException e) {

@@ -4,9 +4,9 @@ package de.hdm.itprojekt.projektmarktplatz.server;
 import java.util.ArrayList;
 import java.util.Vector;
 
-import de.hdm.itprojekt.projektmarktplatz.client.Projektmarktplatz;
 import de.hdm.itprojekt.projektmarktplatz.server.db.*;
-import de.hdm.itprojekt.projektmarktplatz.shared.*;
+import de.hdm.itprojekt.projektmarktplatz.shared.bo.*;
+import de.hdm.thies.bankProjekt.shared.bo.Customer;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
@@ -82,11 +82,32 @@ public class ProjektmarktplatzAdministrationImpl extends RemoteServiceServlet
 	private PartnerprofilMapper prtrMapper = null;
 	
 	public Projektmarktplatz erstelleProjektmarktplatz (String bezeichnung) throws IllegalArgumentException {
-	de.hdm.itprojekt.projektmarktplatz.shared.bo.Projektmarktplatz c = new de.hdm.itprojekt.projektmarktplatz.shared.bo.Projektmarktplatz(bezeichnung);
-	c.setBezeichnung("test");
-	return null;
+	Projektmarktplatz p = new Projektmarktplatz(bezeichnung);
+	p.setId(1);
+	return this.pmMapper.einfuegen(p);
+	
+	public Vector<Projektmarktplatz> getAllProjektmarktplatz throws IllegalArgumentException {
+	    return this.pmMapper.findAll();
+	  }
+	public Customer getCustomerById(int id) throws IllegalArgumentException {
+	    return this.cMapper.findByKey(id);
+	  }
+	public void speichern(Projektmarktplatz p) throws IllegalArgumentException {
+	    pmMapper.speichern(p);
+	  }
+
+	}
 	
 	
 	
-}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

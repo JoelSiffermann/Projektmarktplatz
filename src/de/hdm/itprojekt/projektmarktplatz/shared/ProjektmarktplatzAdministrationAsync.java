@@ -14,4 +14,5 @@ public interface ProjektmarktplatzAdministrationAsync {
 
 	void erstelleProjektmarktplatz(String bezeichnung, AsyncCallback<Projektmarktplatz> callback);
 
+	
 }
